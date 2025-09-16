@@ -10,8 +10,7 @@ export type ThemeProviderProps = {
 };
 
 export type ThemeProviderState = {
-  theme: Theme;
-  //   setTheme: (theme: Theme | ((prev: Theme) => Theme)) => void;
+  theme: Theme;  
   setTheme: () => void;
 };
 
@@ -31,8 +30,7 @@ interface AuthProvider {
 }
 export interface IUser {
   _id: string;
-  id?: string;
-  id?: string;
+  id?: string; 
   name: string;
   email: string;
   role: TRole;
