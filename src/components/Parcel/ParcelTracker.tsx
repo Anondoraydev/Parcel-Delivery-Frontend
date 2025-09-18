@@ -9,26 +9,23 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useLazyGetAllParcelsQuery } from "@/redux/features/parcel/parcel.api";
 import { Search } from "lucide-react";
 import React, { useState } from "react";
 import ParcelDetails from "./ParcelDetails";
 
 const ParcelTracker: React.FC = () => {
   const [trackingId, setTrackingId] = useState("");
-  const [getAllParcels, { data: parcel, isLoading, isError }] =
-    useLazyGetAllParcelsQuery();
-
-  console.log(parcel);
+  const [getParcel, { data: parcel, isLoading, error }] =
+    useLazyGetParcelByTrackingIdQuery();
 
   const handleTrack = () => {
     if (trackingId.trim()) {
-      getAllParcels({ trackingId: trackingId.trim() });
+      getParcel(trackingId.trim());
     }
   };
 
   return (
-    <Card className="w-full max-w-2xl my-10 mx-auto">
+    <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <CardTitle>Track Your Parcel</CardTitle>
         <CardDescription>
@@ -57,13 +54,13 @@ const ParcelTracker: React.FC = () => {
           </div>
         </div>
 
-        {isError && (
+        {error && (
           <div className="bg-destructive/15 text-destructive p-3 rounded-md">
-            {"Parcel not found"}
+            {"data" in error ? error.data.message : "Parcel not found"}
           </div>
         )}
 
-        {parcel && <ParcelDetails parcel={parcel?.data[0]} />}
+        {parcel && <ParcelDetails parcel={parcel} />}
       </CardContent>
     </Card>
   );
