@@ -1,7 +1,6 @@
-// import TravelRegister from "@/assets/images/travel-register.jpg";
-import TravelRegister from "@/assets/images/parcel-r.jpeg";
 import { Link } from "react-router";
 
+import { TravelRegister } from "@/assets/images/travel-register.jpg";
 import { RegisterForm } from "@/components/modules/Authentication/RegisterForm";
 
 export default function Register() {
