@@ -1,4 +1,3 @@
-// import TravelLogin from "@/assets/images/travel-login.jpg";
 import TravelLogin from "@/assets/images/parcel-l.jpeg";
 import { LoginForm } from "@/components/modules/Authentication/LoginForm";
 import { Package } from "lucide-react";
@@ -11,8 +10,7 @@ export default function Login() {
         <div className="flex justify-center gap-2 md:justify-start">
           <Link
             to="/"
-            className="flex items-center text-primary font-bold text-xl"
-          >
+            className="flex items-center text-primary font-bold text-xl">
             <Package className="w-8 h-8 mr-2" />
             ParcelDelivery
           </Link>
