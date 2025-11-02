@@ -19,12 +19,14 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
                 to="/register"
-                className="px-10 py-4 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition duration-300">
+                className="px-10 py-4 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition duration-300"
+              >
                 Get Started
               </Link>
               <Link
                 to="/about"
-                className="px-10 py-4 border-2 border-pink-500 text-pink-500 font-bold rounded-full hover:bg-pink-500 hover:text-white transition duration-300">
+                className="px-10 py-4 border-2 border-pink-500 text-pink-500 font-bold rounded-full hover:bg-pink-500 hover:text-white transition duration-300"
+              >
                 Learn More
               </Link>
             </div>
@@ -76,7 +78,8 @@ const Home: React.FC = () => {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="text-center p-8 bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300">
+                className="text-center p-8 bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
+              >
                 {feature.icon}
                 <h3 className="text-xl font-bold mb-3 text-blue-800">
                   {feature.title}
@@ -100,7 +103,8 @@ const Home: React.FC = () => {
           </p>
           <Link
             to="/register"
-            className="mt-6 inline-block px-12 py-4 bg-white text-pink-500 font-bold rounded-full shadow-lg hover:opacity-90 transition duration-300">
+            className="mt-6 inline-block px-12 py-4 bg-white text-pink-500 font-bold rounded-full shadow-lg hover:opacity-90 transition duration-300"
+          >
             Sign Up Now
           </Link>
         </div>

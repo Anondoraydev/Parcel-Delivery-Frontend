@@ -133,6 +133,8 @@ Setup Instructions
 ------------------
 
 ### Prerequisites
+
+*   Node.js (v14 or higher)
     
 *   npm or yarn package manager
     
@@ -170,7 +172,7 @@ npm install  # or  yarn install
 npm start  # or  yarn start
 ```
 
-5.Open [http://localhost:3000](http://localhost:5173/) to view the application.
+5.Open [http://localhost:3000](http://localhost:3000/) to view the application.
     
 ### Building for Production
 
@@ -269,3 +271,17 @@ License
 -------
 
 This project is licensed under the MY License.
+
+Support
+-------
+
+For support, please open an issue in the GitHub repository or contact the me.
+
+Acknowledgments
+---------------
+
+*   Icons from [LUCIDREACT](https://lucide.dev)
+    
+*   UI inspiration from modern dashboard designs Shadcn
+    
+*   Backend team for API development

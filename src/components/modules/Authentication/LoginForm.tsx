@@ -49,7 +49,7 @@ export function LoginForm({
   const loginHandler = withAsyncHandler((data: FieldValues) => login(data), {
     loadingMessage: "Logging in...",
     successMessage: "Login successful!",
-    errorMessage: error => {
+    errorMessage: (error) => {
       // Handle specific error case
       console.log(error);
       if (error?.data?.message === "User does not exist") {
@@ -64,7 +64,7 @@ export function LoginForm({
       // For other errors, use the default extraction
       return error?.data?.message || error?.message || "Login failed";
     },
-    onError: error => {
+    onError: (error) => {
       // Navigate to register only for the specific error
       if (error?.data?.message === "User does not exist") {
         navigate("/register");
@@ -76,7 +76,7 @@ export function LoginForm({
     rethrowError: false,
   });
 
-  const onSubmit: SubmitHandler<FieldValues> = async data => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     await loginHandler(data);
   };
 
@@ -146,7 +146,8 @@ export function LoginForm({
           onClick={() => window.open(`${config.baseUrl}/auth/google`)}
           type="button"
           variant="outline"
-          className="w-full cursor-pointer">
+          className="w-full cursor-pointer"
+        >
           Login with Google
         </Button>
       </div>
