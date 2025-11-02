@@ -4,116 +4,92 @@ import { Link } from "react-router";
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b text-gray-900">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-32">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 space-y-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-blue-800 leading-tight">
-              Fast & Reliable{" "}
-              <span className="text-pink-500">Parcel Delivery</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700">
-              Experience the future of delivery with speed, care, and precision.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-6">
-              <Link
-                to="/register"
-                className="px-10 py-4 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition duration-300"
-              >
-                Get Started
-              </Link>
-              <Link
-                to="/about"
-                className="px-10 py-4 border-2 border-pink-500 text-pink-500 font-bold rounded-full hover:bg-pink-500 hover:text-white transition duration-300"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-          <div className="md:w-1/2">
-            <img
-              src="https://parceldex.com/frontend/images/head.png"
-              alt="Delivery"
-              className="rounded-3xl shadow-xl"
-            />
+      <section className="py-40 text-primary-foreground bg-gradient-to-r from-primary to-chart-3/70">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-center mb-6">
+            Fast & Reliable Parcel Delivery
+          </h1>
+          <p className="text-xl text-center max-w-2xl mb-8 opacity-90">
+            Delivering your packages with care, speed, and precision. Trusted by
+            thousands of customers nationwide.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/register"
+              className="bg-primary-foreground text-primary font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition duration-300 text-center"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/about"
+              className="border-2 border-primary-foreground text-primary-foreground font-semibold px-8 py-3 rounded-lg hover:bg-primary-foreground hover:text-primary transition duration-300 text-center"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-16">
+      <section className="py-16 my-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose Us?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {[
-              {
-                icon: (
-                  <Truck className="w-16 h-16 text-pink-500 mx-auto mb-4" />
-                ),
-                title: "Super Fast Delivery",
-                desc: "Next-day delivery guaranteed with real-time tracking.",
-              },
-              {
-                icon: (
-                  <Clock className="w-16 h-16 text-pink-500 mx-auto mb-4" />
-                ),
-                title: "Real-Time Tracking",
-                desc: "Monitor your packages anytime with our advanced dashboard.",
-              },
-              {
-                icon: (
-                  <Shield className="w-16 h-16 text-pink-500 mx-auto mb-4" />
-                ),
-                title: "Safe & Secure",
-                desc: "Your packages are handled with utmost care and security.",
-              },
-              {
-                icon: <Star className="w-16 h-16 text-pink-500 mx-auto mb-4" />,
-                title: "Customer Satisfaction",
-                desc: "Thousands of happy customers rate our service 5 stars.",
-              },
-            ].map((feature, idx) => (
-              <div
-                key={idx}
-                className="text-center p-8 bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
-              >
-                {feature.icon}
-                <h3 className="text-xl font-bold mb-3 text-blue-800">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-700">{feature.desc}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-card rounded-lg shadow-md">
+              <Truck className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
+              <p className="text-muted-foreground">
+                Next-day and express delivery options available nationwide.
+              </p>
+            </div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-md">
+              <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Real-time Tracking</h3>
+              <p className="text-muted-foreground">
+                Track your parcels in real-time with our advanced tracking
+                system.
+              </p>
+            </div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-md">
+              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Secure Handling</h3>
+              <p className="text-muted-foreground">
+                Your packages are handled with care and security at every step.
+              </p>
+            </div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-md">
+              <Star className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Rated 5 Stars</h3>
+              <p className="text-muted-foreground">
+                Thousands of satisfied customers rate our service excellent.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-r  to-purple-500 text-white text-center">
-        <div className="container mx-auto px-6 space-y-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold">
-            Ready to Send Your Package?
+      <section className="py-40 bg-primary/70">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6 text-accent-foreground">
+            Ready to Send a Package?
           </h2>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            Join thousands of satisfied customers and experience seamless
-            delivery.
+          <p className="text-xl text-accent-foreground/90 max-w-2xl mx-auto mb-8">
+            Create an account today and experience the fastest, most reliable
+            parcel delivery service.
           </p>
           <Link
             to="/register"
-            className="mt-6 inline-block px-12 py-4 bg-white text-pink-500 font-bold rounded-full shadow-lg hover:opacity-90 transition duration-300"
+            className="bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition duration-300 inline-block"
           >
             Sign Up Now
           </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 bg-blue-900 text-white text-center">
-        <p>&copy; 2025 SwiftParcel. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
